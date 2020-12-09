@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 250ms ease;
+}
+$dark-green-header: #0a4a52;
+$dark-green-btn: #0c636d;
+$teal-logo: #14818d;
+$dark-green-font: #446b6b;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Bebas Neue", cursive;
+  color: $dark-green-header;
+}
+button {
+  background: $dark-green-btn;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
