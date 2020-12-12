@@ -5,7 +5,6 @@ hamburger.addEventListener('click', () => {
  navList.classList.toggle('nav-list-active')
 })
 
-
 const scrollFloat = (element, animIn, animOut, delay) => {
  const width = window.innerWidth
  const isMobile = width <= 768 ? true : false
@@ -13,9 +12,11 @@ const scrollFloat = (element, animIn, animOut, delay) => {
  els.forEach(el => {
   const y = el.getBoundingClientRect().top
   const winY = window.innerHeight - 50
-  const isVisible = y < winY ? true : null
-  el.style.animation = isVisible ? isMobile ? (animIn == "width-to-full") ? "width-to-full-mob .8s ease-out forwards" : `${animIn} .8s ease-out forwards` : `${animIn} 1s ease-out forwards` : `${animOut} 1s ease-out forwards`
-  el.style.animationDelay = isVisible ? isMobile ? '.3s' : `${delay}`: null
+  if (y < winY){
+   const isVisible = true
+   el.style.animation = isVisible ? isMobile ? (animIn == "width-to-full") ? "width-to-full-mob .8s ease-out forwards" : `${animIn} .8s ease-out forwards` : `${animIn} 1s ease-out forwards` : `${animOut} 1s ease-out forwards`
+   el.style.animationDelay = isVisible ? isMobile ? '.3s' : `${delay}`: null
+  }
  })
 }
 document.addEventListener("scroll" , () => {
