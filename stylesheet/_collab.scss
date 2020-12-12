@@ -1,0 +1,103 @@
+.collab {
+  width: 100%;
+  margin-top: 8rem;
+  opacity: 0;
+  transform: scale(0, 1);
+  transform-origin: center;
+  .collab-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    .collab-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      background: $dark-green-btn;
+      padding: 5rem;
+      .collab-left {
+        h1 {
+          color: white;
+          font-weight: 500;
+          font-size: 3rem;
+        }
+        p {
+          color: white;
+          line-height: 1.8;
+          margin-top: 1rem;
+          max-width: 420px;
+        }
+      }
+      .collab-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+        button {
+          padding: 1rem 3rem;
+        }
+        .btn-white {
+          background: white;
+          color: $dark-green-header;
+          border: 2px solid transparent;
+          &:hover {
+            transform: scale(0.99);
+            opacity: 1 !important;
+          }
+        }
+        .btn-outline {
+          border: 2px solid white;
+          background: none;
+          &:hover {
+            transform: scale(0.99);
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  .collab {
+    margin-top: clamp(4rem, 10vw, 8rem);
+    .collab-container {
+      .collab-content {
+        .collab-left {
+          h1 {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+          }
+          p {
+            font-size: clamp(0.75rem, 1.8vw, 1rem);
+            margin-top: clamp(0.2rem, 0.5vw, 1rem);
+          }
+        }
+        .collab-right {
+          button {
+            padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 3vw, 3rem);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .collab {
+    .collab-container {
+      .collab-content {
+        flex-direction: column;
+        align-items: unset;
+        padding: 5rem clamp(1.8rem, 10vw, 5rem);
+        .collab-left {
+          h1 {
+            font-size: clamp(2rem, 7vw, 3rem);
+          }
+          p {
+            font-size: clamp(12px, 2.5vw, 1rem);
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

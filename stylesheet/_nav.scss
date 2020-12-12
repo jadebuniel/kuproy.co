@@ -1,5 +1,10 @@
 nav {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
   .nav-container {
     width: 100%;
     max-width: 1200px;
@@ -95,8 +100,9 @@ nav {
   border-bottom: solid 2px rgba(195, 195, 195, 0.267);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   nav {
+    position: relative;
     .nav-container {
       padding: 1.5rem 0;
       display: flex;
@@ -115,10 +121,11 @@ nav {
         display: flex;
         margin-top: 0;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         position: relative;
         width: unset;
         border: none;
+        padding: 0;
         a {
           .nav-item {
             border: none;
